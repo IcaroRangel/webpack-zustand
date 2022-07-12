@@ -7,12 +7,14 @@ import './index.css';
 import Router from './routes';
 
 const App = () => (
-  <>
+  <div className="app">
     <NavBar />
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
-  </>
+    <div className="component">
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </div>
+  </div>
 );
 
 ReactDOM.render(<App />, document.getElementById('app'));
