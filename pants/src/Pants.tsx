@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Button, Image, Stack } from '@chakra-ui/react';
+import { Heading, Button, Image } from '@chakra-ui/react';
 import './Pants.css';
 
 const Pants = () => {
