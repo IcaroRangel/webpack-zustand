@@ -1,8 +1,12 @@
 import React from 'react';
 import { Heading, Button, Image } from '@chakra-ui/react';
 import './Pants.css';
+//@ts-ignore
+import useStore from 'host/store';
 
 const Pants = () => {
+  const { setPants } = useStore();
+
   return (
     <>
       <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
@@ -16,7 +20,13 @@ const Pants = () => {
             objectFit="cover"
             boxSize="250px"
           />
-          <Button>Adicionar ao carrinho</Button>
+          <Button
+            onClick={() => {
+              setPants();
+            }}
+          >
+            Adicionar ao carrinho
+          </Button>
         </div>
         <div className="container-image">
           <Image
@@ -25,7 +35,13 @@ const Pants = () => {
             objectFit="cover"
             boxSize="250px"
           />
-          <Button>Adicionar ao carrinho</Button>
+          <Button
+            onClick={() => {
+              setPants();
+            }}
+          >
+            Adicionar ao carrinho
+          </Button>
         </div>
 
         <div className="container-image">
@@ -35,7 +51,13 @@ const Pants = () => {
             objectFit="cover"
             boxSize="250px"
           />
-          <Button>Adicionar ao carrinho</Button>
+          <Button
+            onClick={() => {
+              setPants();
+            }}
+          >
+            Adicionar ao carrinho
+          </Button>
         </div>
         <div className="container-image">
           <Image
@@ -44,7 +66,13 @@ const Pants = () => {
             objectFit="cover"
             boxSize="250px"
           />
-          <Button>Adicionar ao carrinho</Button>
+          <Button
+            onClick={() => {
+              setPants();
+            }}
+          >
+            Adicionar ao carrinho
+          </Button>
         </div>
       </div>
     </>

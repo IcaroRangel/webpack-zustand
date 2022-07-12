@@ -6,10 +6,12 @@ import Pants from 'pants/Pants';
 import Shirts from 'shirts/Shirts';
 //@ts-ignore
 import Trolley from 'trolley/Trolley';
+import Home from './Home';
 
 const Router = () => {
   return (
     <Routes>
+      <Route path="/" element={<Home />}></Route>
       <Route path="/pants" element={<Pants />}></Route>
       <Route path="/shirts" element={<Shirts />}></Route>
       <Route path="/trolley" element={<Trolley />}></Route>

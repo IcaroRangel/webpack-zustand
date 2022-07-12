@@ -1,0 +1,18 @@
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50vh;
+}
+
+.infos p {
+  font-size: 32px;
+}
+
+.clear {
+  background: tomato;
+  border: 1px solid #111;
+  height: 32px;
+  color: #fff;
+  margin-top: 12px;
+}

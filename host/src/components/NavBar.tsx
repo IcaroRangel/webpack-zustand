@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Link } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -7,16 +8,16 @@ const NavBar = () => {
     <Container className="container">
       <ul>
         <li>
-          <Link href="/">Início</Link>
+          <Link to="/">Início</Link>
         </li>
         <li>
-          <Link href="/pants">Calças</Link>
+          <Link to="/pants">Calças</Link>
         </li>
         <li>
-          <Link href="/shirts">Camisas</Link>
+          <Link to="/shirts">Camisas</Link>
         </li>
         <li>
-          <Link href="/trolley">Carrinho</Link>
+          <Link to="/trolley">Carrinho</Link>
         </li>
       </ul>
     </Container>
