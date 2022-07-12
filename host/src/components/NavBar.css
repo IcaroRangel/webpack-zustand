@@ -1,0 +1,21 @@
+.container {
+  width: 20%;
+  background: #111;
+  height: 100vh;
+}
+
+.container a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.container a:hover {
+  color: #f8f8d9;
+}
+
+li {
+  padding: 16px;
+}

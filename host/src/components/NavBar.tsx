@@ -1,14 +1,25 @@
 import React from 'react';
-import { Link } from '@chakra-ui/react';
+import { Container, Link } from '@chakra-ui/react';
+import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <>
-      <Link href="/">Início</Link>
-      <Link href="/pants">Calças</Link>
-      <Link href="/shirts">Camisas</Link>
-      <Link href="/trolley">Carrinho</Link>
-    </>
+    <Container className="container">
+      <ul>
+        <li>
+          <Link href="/">Início</Link>
+        </li>
+        <li>
+          <Link href="/pants">Calças</Link>
+        </li>
+        <li>
+          <Link href="/shirts">Camisas</Link>
+        </li>
+        <li>
+          <Link href="/trolley">Carrinho</Link>
+        </li>
+      </ul>
+    </Container>
   );
 };
 
