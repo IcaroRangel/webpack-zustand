@@ -1,7 +1,7 @@
 .container-images {
   display: grid !important;
   grid-template-columns: 500px 500px;
-  gap: 28px;
+  gap: 24px;
   justify-content: center;
   align-items: center;
 }

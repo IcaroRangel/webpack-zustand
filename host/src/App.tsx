@@ -5,16 +5,24 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import Router from './routes';
+import useStore from './store';
 
-const App = () => (
-  <div className="app">
-    <NavBar />
-    <div className="component">
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+const App = () => {
+  //@ts-ignore
+  const { trolley } = useStore();
+
+  console.log(trolley);
+
+  return (
+    <div className="app">
+      <NavBar />
+      <div className="component">
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('app'));
