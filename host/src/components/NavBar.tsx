@@ -16,9 +16,6 @@ const NavBar = () => {
         <li>
           <Link to="/shirts">Camisas</Link>
         </li>
-        <li>
-          <Link to="/trolley">Carrinho</Link>
-        </li>
       </ul>
     </Container>
   );

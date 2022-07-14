@@ -46,7 +46,6 @@ module.exports = {
       remotes: {
         pants: 'pants@http://localhost:3003/remoteEntry.js',
         shirts: 'shirts@http://localhost:3002/remoteEntry.js',
-        trolley: 'trolley@http://localhost:3001/remoteEntry.js',
       },
       exposes: {
         './store': './src/store.jsx',

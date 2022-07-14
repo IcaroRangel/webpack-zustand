@@ -1,7 +1,6 @@
 import React from 'react';
 import { Heading, Button, Image } from '@chakra-ui/react';
 import './Pants.css';
-//@ts-ignore
 import useStore from 'host/store';
 
 const Pants = () => {
