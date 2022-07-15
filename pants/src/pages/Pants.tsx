@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Box, Button, Heading, List, Table, Text } from '@chakra-ui/react';
+import { EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
 
@@ -48,18 +49,21 @@ const Pants = () => {
           border={'1px solid #111'}
           borderRadius={'8'}
           p={'16'}
-          w={500}
+          w={600}
           background={'#f8f8ff'}
         >
           <Box display={'flex'} w={'100%'}>
             <Text w={'20%'} m={'6'} fontWeight={'bold'}>
               ID
             </Text>
-            <Text w={'60%'} m={'6'} fontWeight={'bold'}>
+            <Text w={'40%'} m={'6'} fontWeight={'bold'}>
               NOME
             </Text>
             <Text w={'20%'} m={'6'} fontWeight={'bold'}>
               PREÇO
+            </Text>
+            <Text w={'20%'} m={'6'} fontWeight={'bold'}>
+              AÇÕES
             </Text>
           </Box>
           {registerList.map(pant => (
@@ -68,11 +72,25 @@ const Pants = () => {
                 <Text w={'20%'} m={'6'}>
                   {pant.id}
                 </Text>
-                <Text w={'60%'} m={'6'}>
+                <Text w={'40%'} m={'6'}>
                   {pant.name}
                 </Text>
                 <Text w={'20%'} m={'6'}>
                   {pant.price}
+                </Text>
+                <Text w={'20%'} m={'6'} display={'flex'} gap={26}>
+                  <Link
+                    to={`/pants/update-pant/${pant.id}`}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <EditIcon color="yellowgreen" />
+                  </Link>
+                  <Link
+                    to={`/pants/delete-pant/${pant.id}`}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <DeleteIcon color="tomato" />
+                  </Link>
                 </Text>
               </Box>
             </List>

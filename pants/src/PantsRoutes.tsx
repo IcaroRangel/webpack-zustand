@@ -20,11 +20,11 @@ const routes: TRoute[] = [
     component: <CreatePant />,
   },
   {
-    path: '/pants/update-pant',
+    path: '/pants/update-pant/:id',
     component: <UpdatePant />,
   },
   {
-    path: '/delete-pant',
+    path: '/pants/delete-pant/:id',
     component: <DeletePant />,
   },
 ];

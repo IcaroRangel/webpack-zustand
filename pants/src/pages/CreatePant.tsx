@@ -19,17 +19,12 @@ const CreatePant = () => {
     name: yup.string().required('Nome é obrigatório'),
     price: yup.number().required('Preço é obrigátorio'),
   });
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<TPant>({
+  const { register, handleSubmit } = useForm<TPant>({
     resolver: yupResolver(schema),
   });
 
   const create = useCallback(async data => {
     await api.post('/pants', data);
-    console.log(data);
     navigate('/pants');
   }, []);
 
