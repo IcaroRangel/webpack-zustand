@@ -1,23 +1,46 @@
-import React, { lazy, Suspense } from 'react';
+import React, {
+  ReactElement,
+  Suspense,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Shirts from 'shirts/Shirts';
+import { pantsModule } from './modules/pantsModule';
+
+type TRoute = {
+  path: string;
+  component: ReactElement;
+};
 
 const Router = () => {
-  const PantsRoutes = lazy(() => import('pants/PantsRoutes'));
+  const [routes, setRoutes] = useState<TRoute[]>([]);
+
+  const loadRoutes = useCallback(async () => {
+    const pantsRoutes = await pantsModule.getRoutes();
+
+    //@ts-ignore
+    setRoutes([...pantsRoutes]);
+  }, []);
+
+  useEffect(() => {
+    loadRoutes();
+  }, [loadRoutes]);
 
   return (
-    <Routes>
-      <Route
-        path="/pants"
-        element={
-          <Suspense fallback={<div>carregando...</div>}>
-            <PantsRoutes />
-          </Suspense>
-        }
-      ></Route>
-
-      <Route path="/shirts" element={<Shirts />}></Route>
-    </Routes>
+    <Suspense fallback={<div>loading...</div>}>
+      <Routes>
+        {routes.map((route: TRoute) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={route.component}
+          ></Route>
+        ))}
+        <Route path="/shirts" element={<Shirts />}></Route>
+      </Routes>
+    </Suspense>
   );
 };
 

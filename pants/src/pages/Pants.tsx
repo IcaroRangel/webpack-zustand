@@ -27,8 +27,20 @@ const Pants = () => {
       <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
         Calças
       </Heading>
-      <Button>
-        <Link to="/pants/create-pant">Cadastrar calça</Link>
+      <Button
+        borderRadius={6}
+        mb={6}
+        p={6}
+        color={'#f8f8ff'}
+        background={'#111'}
+        border={'1px solid #f8f8ff'}
+      >
+        <Link
+          to="/pants/create-pant"
+          style={{ textDecoration: 'none', color: '#f8f8ff' }}
+        >
+          Cadastrar calça
+        </Link>
       </Button>
 
       {registerList.length > 0 && (

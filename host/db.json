@@ -19,6 +19,11 @@
       "id": 4,
       "name": "Calça verde",
       "price": 99.99
+    },
+    {
+      "price": 19.99,
+      "name": "Calça marrom",
+      "id": 5
     }
   ],
   "shirts": [
