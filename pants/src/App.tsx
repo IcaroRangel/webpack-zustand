@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
-import Pants from './Pants';
+import PantsRoutes from './PantsRoutes';
 
 const App = () => (
   <>
-    <Pants />
+    <BrowserRouter>
+      <PantsRoutes />
+    </BrowserRouter>
   </>
 );
 ReactDOM.render(<App />, document.getElementById('app'));

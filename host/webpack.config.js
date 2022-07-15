@@ -47,9 +47,7 @@ module.exports = {
         pants: 'pants@http://localhost:3003/remoteEntry.js',
         shirts: 'shirts@http://localhost:3002/remoteEntry.js',
       },
-      exposes: {
-        './store': './src/store.jsx',
-      },
+      exposes: {},
       shared: {
         ...deps,
         react: {

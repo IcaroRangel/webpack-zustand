@@ -43,11 +43,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'pants',
       filename: 'remoteEntry.js',
-      remotes: {
-        host: 'host@http://localhost:3000/remoteEntry.js',
-      },
+      remotes: {},
       exposes: {
-        './Pants': './src/Pants.tsx',
+        './PantsRoutes': './src/PantsRoutes.tsx',
       },
       shared: {
         ...deps,

@@ -1,0 +1,46 @@
+{
+  "pants": [
+    {
+      "id": 1,
+      "name": "Calça vermelha",
+      "price": 89.99
+    },
+    {
+      "id": 2,
+      "name": "Calça rosa",
+      "price": 119.99
+    },
+    {
+      "id": 3,
+      "name": "Calça preta",
+      "price": 69.99
+    },
+    {
+      "id": 4,
+      "name": "Calça verde",
+      "price": 99.99
+    }
+  ],
+  "shirts": [
+    {
+      "id": 1,
+      "name": "Camisa vermelha",
+      "price": 29.99
+    },
+    {
+      "id": 2,
+      "name": "Camisa branca",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "name": "Camisa preta",
+      "price": 19.99
+    },
+    {
+      "id": 4,
+      "name": "Camisa azul",
+      "price": 39.99
+    }
+  ]
+}

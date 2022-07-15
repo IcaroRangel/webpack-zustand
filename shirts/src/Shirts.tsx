@@ -1,10 +1,8 @@
 import React from 'react';
-import { Heading, Button, Image } from '@chakra-ui/react';
+import { Heading, Image } from '@chakra-ui/react';
 import './Shirts.css';
-import useStore from 'host/store';
 
 const Shirts = () => {
-  const { setShirts } = useStore();
   return (
     <>
       <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
@@ -19,13 +17,6 @@ const Shirts = () => {
             boxSize="250px"
             border="1px solid #18ab29"
           />
-          <Button
-            onClick={() => {
-              setShirts();
-            }}
-          >
-            Adicionar ao carrinho
-          </Button>
         </div>
         <div className="container-image">
           <Image
@@ -35,13 +26,6 @@ const Shirts = () => {
             boxSize="250px"
             border="1px solid #18ab29"
           />
-          <Button
-            onClick={() => {
-              setShirts();
-            }}
-          >
-            Adicionar ao carrinho
-          </Button>
         </div>
 
         <div className="container-image">
@@ -52,13 +36,6 @@ const Shirts = () => {
             boxSize="250px"
             border="1px solid #18ab29"
           />
-          <Button
-            onClick={() => {
-              setShirts();
-            }}
-          >
-            Adicionar ao carrinho
-          </Button>
         </div>
         <div className="container-image">
           <Image
@@ -68,13 +45,6 @@ const Shirts = () => {
             boxSize="250px"
             border="1px solid #18ab29"
           />
-          <Button
-            onClick={() => {
-              setShirts();
-            }}
-          >
-            Adicionar ao carrinho
-          </Button>
         </div>
       </div>
     </>

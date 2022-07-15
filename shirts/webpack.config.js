@@ -43,9 +43,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'shirts',
       filename: 'remoteEntry.js',
-      remotes: {
-        host: 'host@http://localhost:3000/remoteEntry.js',
-      },
+      remotes: {},
       exposes: {
         './Shirts': './src/Shirts.tsx',
       },

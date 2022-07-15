@@ -1,7 +1,7 @@
-declare module 'pants/Pants' {
-  const Pants: React.ComponentType;
+declare module 'pants/PantsRoutes' {
+  const PantsRoutes: React.ComponentType;
 
-  export default Pants;
+  export default PantsRoutes;
 }
 
 declare module 'shirts/Shirts' {
