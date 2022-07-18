@@ -18,9 +18,8 @@ const Router = () => {
   const [routes, setRoutes] = useState<TRoute[]>([]);
 
   const loadRoutes = useCallback(async () => {
-    const pantsRoutes = await pantsModule.getRoutes();
+    const pantsRoutes: any = await pantsModule.getRoutes();
 
-    //@ts-ignore
     setRoutes([...pantsRoutes]);
   }, []);
 

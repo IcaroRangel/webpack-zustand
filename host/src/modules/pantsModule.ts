@@ -1,3 +1,10 @@
+import { ReactElement } from 'react';
+
+type TRoute = {
+  path: string;
+  component: ReactElement;
+};
+
 export const pantsModule = {
   async getRoutes() {
     try {

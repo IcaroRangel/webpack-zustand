@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react';
+import React, { lazy, ReactElement } from 'react';
 
-import Pants from './pages/Pants';
-import CreatePant from './pages/CreatePant';
-import UpdatePant from './pages/UpdatePant';
-import DeletePant from './pages/DeletePant';
+const Pants = lazy(() => import('./pages/Pants'));
+const CreatePant = lazy(() => import('./pages/CreatePant'));
+const UpdatePant = lazy(() => import('./pages/UpdatePant'));
+const DeletePant = lazy(() => import('./pages/DeletePant'));
 
 type TRoute = {
   path: string;
