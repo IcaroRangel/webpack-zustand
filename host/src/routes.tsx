@@ -6,8 +6,8 @@ import React, {
   useState,
 } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Shirts from 'shirts/Shirts';
 import { pantsModule } from './modules/pantsModule';
+import { shirtsModule } from './modules/shirtsModule';
 
 type TRoute = {
   path: string;
@@ -19,8 +19,8 @@ const Router = () => {
 
   const loadRoutes = useCallback(async () => {
     const pantsRoutes: any = await pantsModule.getRoutes();
-
-    setRoutes([...pantsRoutes]);
+    const shirtsRoutes: any = await shirtsModule.getRoutes();
+    setRoutes([...pantsRoutes, ...shirtsRoutes]);
   }, []);
 
   useEffect(() => {
@@ -37,7 +37,6 @@ const Router = () => {
             element={route.component}
           ></Route>
         ))}
-        <Route path="/shirts" element={<Shirts />}></Route>
       </Routes>
     </Suspense>
   );

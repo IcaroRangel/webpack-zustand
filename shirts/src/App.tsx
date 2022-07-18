@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Shirts from './Shirts';
+import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 
 const App = () => (
   <>
-    <Shirts />
+    <BrowserRouter></BrowserRouter>
   </>
 );
 ReactDOM.render(<App />, document.getElementById('app'));

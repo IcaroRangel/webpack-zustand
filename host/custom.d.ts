@@ -4,8 +4,8 @@ declare module 'pants/PantsRoutes' {
   export default PantsRoutes;
 }
 
-declare module 'shirts/Shirts' {
-  const Shirts: React.ComponentType;
+declare module 'shirts/ShirtsRoutes' {
+  const ShirtsRoutes: React.ComponentType;
 
-  export default Shirts;
+  export default ShirtsRoutes;
 }

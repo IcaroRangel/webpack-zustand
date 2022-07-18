@@ -28,9 +28,9 @@
       "price": 19.99
     },
     {
-      "id": 4,
-      "name": "Camisa azul",
-      "price": 39.99
+      "price": 25.99,
+      "name": "Camisa rosa",
+      "id": 4
     }
   ]
 }
