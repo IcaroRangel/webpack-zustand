@@ -8,8 +8,8 @@
   height: 100vh;
 }
 .component {
-  width: 80%;
+  /* width: 80%; */
   position: absolute;
-  right: 0;
+  left: 30%;
   top: 0;
 }

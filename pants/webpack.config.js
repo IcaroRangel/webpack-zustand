@@ -46,6 +46,7 @@ module.exports = {
       remotes: {},
       exposes: {
         './PantsRoutes': './src/PantsRoutes.tsx',
+        './PantsMenu': './src/PantsMenu.ts',
       },
       shared: {
         ...deps,

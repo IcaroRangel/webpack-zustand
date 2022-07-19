@@ -9,7 +9,7 @@ export const pantsModule = {
   },
   async getMenus() {
     try {
-      const routes = await import('pants/PantsRoutes');
+      const routes = await import('pants/PantsMenu');
       return routes.default;
     } catch (error) {
       return [];

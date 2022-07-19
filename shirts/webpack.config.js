@@ -46,6 +46,7 @@ module.exports = {
       remotes: {},
       exposes: {
         './ShirtsRoutes': './src/ShirtsRoutes.tsx',
+        './ShirtsMenu': './src/ShirtsMenu.ts',
       },
       shared: {
         ...deps,
