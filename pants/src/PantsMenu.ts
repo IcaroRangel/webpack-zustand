@@ -1,6 +1,6 @@
 const menu = [
   {
-    title: 'Calça',
+    title: 'Calças',
     path: '/pants',
     submenus: [
       {

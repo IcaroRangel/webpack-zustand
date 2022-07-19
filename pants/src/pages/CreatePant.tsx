@@ -1,4 +1,4 @@
-import { Button, Heading, Box } from '@chakra-ui/react';
+import { Button, Box } from '@chakra-ui/react';
 import Input from '../components/Input';
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useCallback } from 'react';
@@ -30,9 +30,6 @@ const CreatePant = () => {
 
   return (
     <>
-      <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
-        Cadastrar calça
-      </Heading>
       <form
         onSubmit={handleSubmit(create)}
         style={{

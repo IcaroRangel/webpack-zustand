@@ -1,4 +1,4 @@
-import { Button, Heading, Box } from '@chakra-ui/react';
+import { Button, Box } from '@chakra-ui/react';
 import Input from '../components/Input';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -45,9 +45,6 @@ const UpdateShirt = () => {
 
   return (
     <>
-      <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
-        Atualizar camisa
-      </Heading>
       <form
         onSubmit={handleSubmit(update)}
         style={{

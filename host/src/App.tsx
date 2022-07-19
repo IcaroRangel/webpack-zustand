@@ -5,14 +5,21 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import Router from './routes';
+import Header from './components/Header';
+import { Box } from '@chakra-ui/react';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
-      <div className="component">
-        <Router />
-      </div>
+      <Header />
+      <Box display={'flex'}>
+        <Box>
+          <Menu />
+        </Box>
+        <Box ml={124}>
+          <Router />
+        </Box>
+      </Box>
     </BrowserRouter>
   );
 };

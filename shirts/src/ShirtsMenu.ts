@@ -1,6 +1,6 @@
 const menu = [
   {
-    title: 'Camisa',
+    title: 'Camisas',
     path: '/shirts',
     submenus: [
       {

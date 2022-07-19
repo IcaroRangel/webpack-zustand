@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Box, Button, Heading, List, Table, Text } from '@chakra-ui/react';
+import { Box, Button, List, Table, Text } from '@chakra-ui/react';
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
@@ -25,9 +25,6 @@ const Pants = () => {
 
   return (
     <>
-      <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
-        Calças
-      </Heading>
       <Button
         borderRadius={6}
         mb={6}

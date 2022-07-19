@@ -1,4 +1,4 @@
-import { Button, Heading, Box, Input } from '@chakra-ui/react';
+import { Button, Box, Input } from '@chakra-ui/react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import React, { useCallback, useEffect, useState } from 'react';
 import api from '../services/api';
@@ -29,9 +29,6 @@ const DeleteShirt = () => {
 
   return (
     <>
-      <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
-        Deletar camisa
-      </Heading>
       <form
         onSubmit={e => destroy(e, id)}
         style={{

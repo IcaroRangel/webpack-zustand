@@ -1,12 +1,7 @@
-import { Button, Heading, Box, Input } from '@chakra-ui/react';
+import { Button, Box, Input } from '@chakra-ui/react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import React, { useCallback, useEffect, useState } from 'react';
 import api from '../services/api';
-
-type TPant = {
-  name: string;
-  price: number;
-};
 
 const DeletePant = () => {
   const navigate = useNavigate();
@@ -34,9 +29,6 @@ const DeletePant = () => {
 
   return (
     <>
-      <Heading as="h1" textAlign="center" pb="12" textTransform="uppercase">
-        Deletar calça
-      </Heading>
       <form
         onSubmit={e => destroy(e, id)}
         style={{

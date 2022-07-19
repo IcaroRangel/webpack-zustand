@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Box, Button, Container, IconButton } from '@chakra-ui/react';
+import { Box, Button, Container } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import './Menu.css';
 import { pantsModule } from '../modules/pantsModule';
 import { shirtsModule } from '../modules/shirtsModule';
 import { ChevronDownIcon } from '@chakra-ui/icons';
@@ -33,50 +32,70 @@ const Menu = () => {
   }, []);
 
   return (
-    <Container className="container">
-      <nav>
-        <Box border={'1px solid #111'} p={6} w={100} mb={12}>
-          Menu
-          <Button
-            border={'none'}
-            borderRadius={'50%'}
-            ml={6}
-            p={2}
-            onClick={() => setIsOpen(!isOpen)}
-            cursor={'pointer'}
-          >
-            <ChevronDownIcon />
-          </Button>
-        </Box>
-        {isOpen &&
-          menu.map((route: any, index: any) => (
-            <>
-              {route.submenus && (
-                <Box>
-                  <Button borderRadius={4} p={2} cursor={'pointer'}>
+    <Container ml={124} mr={124}>
+      <Box
+        border={'1px solid #00ff7f'}
+        p={6}
+        w={100}
+        mb={12}
+        borderRadius={12}
+        background={'#f8fff7'}
+      >
+        Menu
+        <Button
+          border={'none'}
+          borderRadius={'50%'}
+          ml={6}
+          p={2}
+          cursor={'pointer'}
+          background={'#111'}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <ChevronDownIcon color={'#f8fff7'} />
+        </Button>
+      </Box>
+      {isOpen &&
+        menu.map((route: any, index: any) => (
+          <>
+            {route.submenus && (
+              <Box p={8}>
+                <Button
+                  p={4}
+                  borderRadius={4}
+                  cursor={'pointer'}
+                  background={'#111'}
+                  color={'#f8fff7'}
+                >
+                  <Link
+                    key={`${index}`}
+                    to={route.path}
+                    style={{ textDecoration: 'none', color: '#f8fff7' }}
+                  >
+                    {route.title}
+                  </Link>
+                </Button>
+                {route.submenus.map((submenu: any) => (
+                  <Box
+                    key={submenu.path}
+                    ml={8}
+                    mb={10}
+                    p={3}
+                    border={'1px solid #00ff7f'}
+                    borderRadius={4}
+                    background={'#f8fff7'}
+                  >
                     <Link
-                      key={`${index}`}
-                      to={route.path}
                       style={{ textDecoration: 'none', color: '#111' }}
+                      to={submenu.path}
                     >
-                      {route.title}
+                      {submenu.label}
                     </Link>
-                  </Button>
-                  {route.submenus.map((submenu: any) => (
-                    <Box key={submenu.path} pl={8} pb={10}>
-                      <Link
-                        style={{ textDecoration: '#909090', color: '#111' }}
-                        to={submenu.path}
-                      >
-                        {submenu.label}
-                      </Link>
-                    </Box>
-                  ))}
-                </Box>
-              )}
-            </>
-          ))}
-      </nav>
+                  </Box>
+                ))}
+              </Box>
+            )}
+          </>
+        ))}
     </Container>
   );
 };

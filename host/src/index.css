@@ -1,15 +1,10 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .app {
   width: 100%;
   height: 100vh;
-}
-.component {
-  /* width: 80%; */
-  position: absolute;
-  left: 30%;
-  top: 0;
 }
