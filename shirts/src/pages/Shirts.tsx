@@ -25,25 +25,9 @@ const Shirts = () => {
 
   return (
     <>
-      <Button
-        borderRadius={6}
-        mb={6}
-        p={6}
-        color={'#f8f8ff'}
-        background={'#111'}
-        border={'1px solid #f8f8ff'}
-      >
-        <Link
-          to="/shirts/create-shirt"
-          style={{ textDecoration: 'none', color: '#f8f8ff' }}
-        >
-          Cadastrar camisa
-        </Link>
-      </Button>
-
       {registerList.length > 0 && (
         <Table
-          border={'1px solid #111'}
+          border={'1px solid #00ff7f'}
           borderRadius={'8'}
           p={'16'}
           w={600}
@@ -80,7 +64,7 @@ const Shirts = () => {
                     to={`/shirts/update-shirt/${shirt.id}`}
                     style={{ textDecoration: 'none' }}
                   >
-                    <EditIcon color="yellowgreen" />
+                    <EditIcon color="#1374bb" />
                   </Link>
                   <Link
                     to={`/shirts/delete-shirt/${shirt.id}`}
@@ -94,6 +78,21 @@ const Shirts = () => {
           ))}
         </Table>
       )}
+      <Link
+        to="/shirts/create-shirt"
+        style={{ textDecoration: 'none', color: '#f8f8ff' }}
+      >
+        <Button
+          borderRadius={6}
+          mt={6}
+          p={6}
+          color={'#f8f8ff'}
+          background={'#111'}
+          border={'1px solid #f8f8ff'}
+        >
+          CADASTRAR CAMISA
+        </Button>
+      </Link>
     </>
   );
 };

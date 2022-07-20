@@ -13,9 +13,9 @@ const Header = () => {
       borderBottom={'1px solid #00ff7f'}
     >
       <Image
-        src="https://logoipsum.com/logoipsum.png"
+        src="https://media.istockphoto.com/vectors/nature-house-symbol-template-design-vector-emblem-design-concept-vector-id801722554?k=20&m=801722554&s=170667a&w=0&h=4d6NczmVbzcs-wRP3lZhLjYJMfxKeSNPrx6d0OGIy7k="
         alt="Logo"
-        w={150}
+        w={115}
         h={75}
         borderRadius={12}
         pb={8}

@@ -25,29 +25,13 @@ const Pants = () => {
 
   return (
     <>
-      <Button
-        borderRadius={6}
-        mb={6}
-        p={6}
-        color={'#f8f8ff'}
-        background={'#111'}
-        border={'1px solid #f8f8ff'}
-      >
-        <Link
-          to="/pants/create-pant"
-          style={{ textDecoration: 'none', color: '#f8f8ff' }}
-        >
-          Cadastrar calça
-        </Link>
-      </Button>
-
       {registerList.length > 0 && (
         <Table
-          border={'1px solid #111'}
+          border={'1px solid #00ff7f'}
           borderRadius={'8'}
           p={'16'}
           w={600}
-          background={'#f8f8ff'}
+          background={'#f8fff7'}
         >
           <Box display={'flex'} w={'100%'}>
             <Text w={'20%'} m={'6'} fontWeight={'bold'}>
@@ -80,7 +64,7 @@ const Pants = () => {
                     to={`/pants/update-pant/${pant.id}`}
                     style={{ textDecoration: 'none' }}
                   >
-                    <EditIcon color="yellowgreen" />
+                    <EditIcon color="#1374bb" />
                   </Link>
                   <Link
                     to={`/pants/delete-pant/${pant.id}`}
@@ -94,6 +78,22 @@ const Pants = () => {
           ))}
         </Table>
       )}
+      <Link
+        to="/pants/create-pant"
+        style={{ textDecoration: 'none', color: '#f8fff7' }}
+      >
+        <Button
+          borderRadius={6}
+          mt={6}
+          p={6}
+          color={'#f8fff7'}
+          background={'#111'}
+          border={'1px solid #f8fff7'}
+          cursor={'pointer'}
+        >
+          CADASTRAR CALÇA
+        </Button>
+      </Link>
     </>
   );
 };

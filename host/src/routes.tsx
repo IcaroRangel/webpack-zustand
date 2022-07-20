@@ -1,3 +1,4 @@
+import { Box, Spinner } from '@chakra-ui/react';
 import React, {
   ReactElement,
   Suspense,
@@ -28,7 +29,19 @@ const Router = () => {
   }, [loadRoutes]);
 
   return (
-    <Suspense fallback={<div>loading...</div>}>
+    <Suspense
+      fallback={
+        <Box
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          w={600}
+          height={'100%'}
+        >
+          <Spinner w={32} h={32} speed={'0.65s'} />
+        </Box>
+      }
+    >
       <Routes>
         {routes.map((route: TRoute) => (
           <Route

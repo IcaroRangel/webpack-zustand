@@ -48,11 +48,11 @@ const UpdatePant = () => {
       <form
         onSubmit={handleSubmit(update)}
         style={{
-          border: '1px solid #111',
+          border: '1px solid #00ff7f',
           borderRadius: '8px',
           padding: '16px',
           width: '500px',
-          background: '#f8f8ff',
+          background: '#f8fff7',
           height: '200px',
         }}
       >
@@ -80,27 +80,27 @@ const UpdatePant = () => {
           borderRadius={8}
           p={12}
           m={16}
-          color={'#f8f8ff'}
-          background={'#111'}
-          border={'1px solid #f8f8ff'}
+          color={'#111'}
+          background={'#00ff7f'}
+          border={'none'}
         >
           ENVIAR
         </Button>
       </form>
-      <Button
-        type="submit"
-        cursor={'pointer'}
-        borderRadius={8}
-        p={8}
-        m={32}
-        color={'#111'}
-        background={'#f8f8ff'}
-        border={'1px solid #111'}
-      >
-        <Link to="/pants" style={{ textDecoration: 'none', color: '#111' }}>
-          Voltar
-        </Link>
-      </Button>
+      <Link to="/pants" style={{ textDecoration: 'none' }}>
+        <Button
+          type="submit"
+          cursor={'pointer'}
+          borderRadius={8}
+          p={8}
+          m={32}
+          background={'#111'}
+          border={'1px solid #f8fff7'}
+          color={'#f8fff7'}
+        >
+          VOLTAR
+        </Button>
+      </Link>
     </>
   );
 };
